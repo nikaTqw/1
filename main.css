@@ -1,0 +1,88 @@
+div, h1, h2, h3, h4, h5, h6, p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.h1-1 {
+  font-size: calc(3rem + 1.5vw);
+  font-weight: 700;
+}
+
+.medium-font {
+  font-weight: 600 !important;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.for_table {
+  font-size: 20px !important;
+  font-weight: 500;
+}
+
+#before, #form_format {
+  background-color: lightgrey;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+
+#before[required] + label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#before[required] + label::before {
+  content: url(images/edit.png);
+  position: absolute;
+  left: -2.5em;
+  top: 1rem;
+  z-index: 1;
+}
+
+#before[required]:focus, #before[required]:valid {
+  background-color: white;
+  border: 1.5px solid #212529;
+  color: #212529;
+  padding: 1rem 1.5rem;
+}
+
+#form_format[required]:focus, #form_format[required]:valid {
+  background-color: white;
+  border: 1.5px solid #212529;
+  color: #212529;
+  padding: 1rem 1.5rem;
+}
+
+#Price_list {
+  background-color: lightgrey;
+  padding: 1rem 1.5rem;
+  border: none;
+}
+
+#Price_list[required]:focus, #Price_list[required]:valid, #Price_list_Select {
+  background-color: white;
+  border: 1.5px solid #212529;
+  color: #212529;
+  padding: 1rem 1.5rem;
+  z-index: 1;
+}
+
+#second {
+  font-size: 14px;
+  color: gray;
+}
+
+#bg-two-color {
+  background: linear-gradient(to bottom, #e2e3e5 50%, #fff 50%);
+}
+
+#shadow_act {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+#shadow_act:focus {
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=main.css.map */
