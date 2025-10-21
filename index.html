@@ -7,33 +7,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
 <body>
 
-<div> 
+<div id="main"> 
     <!-- Навигация -->
-    <nav class="navbar navbar-expand-md px-5 py-4 mb-5">
+    <nav class="navbar navbar-expand-lg px-4 px-md-5 py-md-4 py-3 mb-md-5">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="images/Logo.png" alt="Logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h2 class="offcanvas-title" id="offcanvasLabel">Меню</h2>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" id="expand-lg">
+            <ul class="navbar-nav flex-grow-1 pe-3" id="offcanvas-item" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" href="#">Создатели</a>
+                <a class="nav-link" href="#about-more">Топ NFT</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#collection" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Коллекции</a>
+                <ul class="dropdown-menu">
+                    <li role="presentation"><a class="dropdown-item" href="#collection">Сегодня</a></li>
+                    <li role="presentation"><a class="dropdown-item" href="#collection">Месяц</a></li>
+                    <li role="presentation"><a class="dropdown-item" href="#collection">Год</a></li>
+                </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Продукты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Статистика</a>
+                <a class="nav-link" href="#question">Вопросы</a>
             </li>
             </ul>
+
             <form class="d-flex gap-3" role="search">
                 <input class="form-control no-border me-2 pe-5" type="search" placeholder="Поиск" aria-label="Search">
                 <button class="btn btn-dark text-nowrap p-2 px-4" type="submit">ИСКАТЬ NFT</button>
@@ -43,191 +55,210 @@
     </nav>
 
     <!-- Главный экран -->
-    <div class="content ps-5">
+    <div class="content ps-md-5 ps-4  overflow-x-hidden">
     <div class="row">
-        <div class="col-2">
+        <div class="col-lg-2 col-4">
             <hr>
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
-            <div class="py-1 h1-1">Откройте и cоздайте NFT</div>
-            <div class="py-4 col-9">Откройте для себя, создайте и продайте NFT на нашей торговой площадке NFT с более чем тысячами NFT <br>и получите <span class="fw-bold">скидку 20% от первой покупки.</span></div>
+        <div class="col-md-6 col-12">
+            <div class="py-1 h1-1">Откройте<br> и cоздайте NFT</div>
+            <div class="py-4 col-9">Откройте для себя, создайте и продайте NFT на нашей торговой площадке с более чем тысячами товарами и получите <span class="fw-bold">скидку 20% от первой покупки.</span></div>
             <div class="d-flex gap-4">
-                <button class="btn btn-dark text-nowrap p-3 medium-font" type="submit">УЗНАТЬ БОЛЬШЕ</button>
-                <button class="btn btn-outline-dark text-nowrap medium-font" type="submit">СОЗДАТЬ NFT</button>
+                <button class="btn btn-dark text-nowrap medium-font px-3" id="button-size" type="submit" onclick="location.href='#about-more'">
+                    УЗНАТЬ БОЛЬШЕ</button>
+                <button class="btn btn-outline-dark text-nowrap medium-font" type="submit" onclick="location.href='#creat-nft'">
+                    СОЗДАТЬ NFT</button>
             </div>
             <div class="d-flex gap-4 py-5">
                 <div>
-                    <p class="h2 fw-bolder">430 тыс.</p>
+                    <h2 class="fw-bolder text-nowrap">430 тыс.</h2>
                     <p class="font-size-12">Произведений искусства</p>
                 </div>
                 <div>
-                    <p class="h2 fw-bolder">159 тыс.</p>
+                    <h2 class="fw-bolder text-nowrap">159 тыс.</h2>
                     <p class="font-size-12">Создателей</p>
                 </div>
                 <div>
-                    <p class="h2 fw-bolder">87 тыс.</p>
+                    <h2 class="fw-bolder text-nowrap">87 тыс.</h2>
                     <p class="font-size-12">Коллекций</p>
                 </div>
             </div>
         </div>
         <div class="row col-6">
-            <div class="col-6">
-            <img src="images/NFT-1.png" class="rounded-5 object-fit-cover" alt="" width="390" height="390">
+            <div class="col-md-6 col-8">
+            <img src="images/NFT-1.png" class="object-fit-cover" alt="" id="img-size-1">
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-3">
             <div class="d-flex align-items-center">
-                <img src="images/Arrow.png" alt="">
-                <img src="images/pattern.png" alt="">
+                <img src="images/Arrow.png" alt="" id="arrow-img">
+                <img src="images/pattern.png" alt="" id="pattern-img">
             </div>
-            <img src="images/NFT-2.png" class="rounded-5 object-fit-cover position-relative translate-middle start-50" alt="" width="320" height="320">
+            <img src="images/NFT-2.png" class="object-fit-cover position-relative" alt="" id="img-size-2">
             </div>
         </div>
     </div>
     </div>
 </div>
 
-<div class="d-flex flex-column align-items-center bg-secondary-subtle pt-5 overflow-x-hidden">
-    <div class="h2 text-body-tertiary text-center py-5 medium-font">Еженедельно - Топ NFT</div>
+<div class="d-flex flex-column align-items-center bg-secondary-subtle pt-5 overflow-x-hidden" id="about-more">
+    <h2 class="text-body-tertiary text-center py-5 medium-font">Еженедельно - Топ NFT</h2>
     
     <!-- Карточки -->
-    <div id="carousel" class="owl-carousel owl-theme d-flex gap-3">
-    <!-- <div class="carousel-inner d-flex gap-3"> -->
-        <div class="bg-white p-2 rounded d-flex flex-column align-items-center width-auto" style="width: 270px;">
-            <img src="images/NFT-2.png" class="rounded object-fit-cover" alt="" width="250" height="250">
-            <div class="h5 py-3 fw-bolder">Солнцезащитные очки</div>
-            <div class="d-flex flex-row gap-5">
-                <div class="d-flex flex-column">
-                    <p class="m-0 font-size-12">Ставка</p>
-                    <div class="d-flex flex-row align-items-center">
-                        <img src="images/mdi_ethereum.png">
-                        <p class="m-0">1.75</p>
+    <div class="d-flex gap-3">
+        <div class="card p-2" data-bs-toggle="modal" data-bs-target="#Modal_1">
+            <img src="images/NFT-1.png" class="card-img-top object-fit-cover rounded-2" alt="" id="card-image">
+            <h5 class="card-title py-2 fw-bolder text-center">Солнцезащитные<br>очки</h5>
+            <div class="card-body">                
+                <div class="row p-0">
+                    <div class="col-12 col-lg-8 row">
+                        <p class="col-8 col-lg-12 m-0 font-size-12 p-0">Ставка</p>
+                        <div class="col-4 col-lg-6 d-flex flex-row align-items-center">
+                            <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
+                            <p class="m-0">1.75</p>
+                        </div>
                     </div>
+                    <button class="col-12 col-lg btn btn-dark p-0 py-2 py-lg-0 text-wrap mt-2 mt-lg-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
                 </div>
-                <button class="btn btn-dark text-nowrap p-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
             </div>
         </div>
 
-        <div class="bg-white p-2 rounded d-flex flex-column align-items-center width-auto" style="width: 270px;">
-            <img src="images/NFT-1.png" class="rounded object-fit-cover" alt="" width="250" height="250">
-            <div class="h5 py-3 fw-bolder">Солнцезащитные очки</div>
-            <div class="d-flex flex-row gap-5">
-                <div class="d-flex flex-column">
-                    <p class="m-0 font-size-12">Ставка</p>
-                    <div class="d-flex flex-row align-items-center">
-                        <img src="images/mdi_ethereum.png">
-                        <p class="m-0">1.75</p>
+        <div class="card p-2" data-bs-toggle="modal" data-bs-target="#Modal_1">
+            <img src="images/NFT-2.png" class="card-img-top object-fit-cover rounded-2" alt="" id="card-image">
+            <h5 class="card-title py-2 fw-bolder text-center">Солнцезащитные<br>очки</h5>
+            <div class="card-body">                
+                <div class="row p-0">
+                    <div class="col-12 col-lg-8 row">
+                        <p class="col-8 col-lg-12 m-0 font-size-12 p-0">Ставка</p>
+                        <div class="col-4 col-lg-6 d-flex flex-row align-items-center">
+                            <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
+                            <p class="m-0">1.75</p>
+                        </div>
                     </div>
+                    <button class="col-12 col-lg btn btn-dark p-0 py-2 py-lg-0 text-wrap mt-2 mt-lg-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
                 </div>
-                <button class="btn btn-dark text-nowrap p-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
             </div>
         </div>
-
-        <div class="bg-white p-2 rounded d-flex flex-column align-items-center width-auto" style="width: 270px;">
-            <img src="images/NFT-3.png" class="rounded object-fit-cover" alt="" width="250" height="250">
-            <div class="h5 py-3 fw-bolder">Солнцезащитные очки</div>
-            <div class="d-flex flex-row gap-5">
-                <div class="d-flex flex-column">
-                    <p class="m-0 font-size-12">Ставка</p>
-                    <div class="d-flex flex-row align-items-center">
-                        <img src="images/mdi_ethereum.png">
-                        <p class="m-0">1.75</p>
+        
+        <div class="card p-2" data-bs-toggle="modal" data-bs-target="#Modal_1">
+            <img src="images/NFT-3.png" class="card-img-top object-fit-cover rounded-2" alt="" id="card-image">
+            <h5 class="card-title py-2 fw-bolder text-center">Солнцезащитные<br>очки</h5>
+            <div class="card-body">                
+                <div class="row p-0">
+                    <div class="col-12 col-lg-8 row">
+                        <p class="col-8 col-lg-12 m-0 font-size-12 p-0">Ставка</p>
+                        <div class="col-4 col-lg-6 d-flex flex-row align-items-center">
+                            <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
+                            <p class="m-0">1.75</p>
+                        </div>
                     </div>
+                    <button class="col-12 col-lg btn btn-dark p-0 py-2 py-lg-0 text-wrap mt-2 mt-lg-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
                 </div>
-                <button class="btn btn-dark text-nowrap p-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
             </div>
         </div>
-
-        <div class="bg-white p-2 rounded d-flex flex-column align-items-center width-auto" style="width: 270px;">
-            <img src="images/NFT-4.png" class="rounded object-fit-cover" alt="" width="250" height="250">
-            <div class="h5 py-3 fw-bolder">Солнцезащитные очки</div>
-            <div class="d-flex flex-row gap-5">
-                <div class="d-flex flex-column">
-                    <p class="m-0 font-size-12">Ставка</p>
-                    <div class="d-flex flex-row align-items-center">
-                        <img src="images/mdi_ethereum.png">
-                        <p class="m-0 ">1.75</p>
+        
+        <div class="card p-2" data-bs-toggle="modal" data-bs-target="#Modal_1">
+            <img src="images/NFT-4.png" class="card-img-top object-fit-cover rounded-2" alt="" id="card-image">
+            <h5 class="card-title py-2 fw-bolder text-center">Солнцезащитные<br>очки</h5>
+            <div class="card-body">                
+                <div class="row p-0">
+                    <div class="col-12 col-lg-8 row">
+                        <p class="col-8 col-lg-12 m-0 font-size-12 px-0">Ставка</p>
+                        <div class="col-4 col-lg-6 d-flex flex-row align-items-center">
+                            <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
+                            <p class="m-0">1.75</p>
+                        </div>
                     </div>
+                    <button class="col-12 col-lg btn btn-dark p-0 py-2 py-lg-0 text-wrap mt-2 mt-lg-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
                 </div>
-                <button class="btn btn-dark text-nowrap p-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
             </div>
         </div>
-
-        <div class="bg-white p-2 rounded d-flex flex-column align-items-center width-auto" style="width: 270px;">
-            <img src="images/NFT-5.png" class="rounded object-fit-cover" alt="" width="250" height="250">
-            <div class="h5 py-3 fw-bolder">Солнцезащитные очки</div>
-            <div class="d-flex flex-row gap-5">
-                <div class="d-flex flex-column">
-                    <p class="m-0 font-size-12">Cтавка</p>
-                    <div class="d-flex flex-row align-items-center">
-                        <img src="images/mdi_ethereum.png">
-                        <p class="m-0">1.75</p>
+        
+        <div class="card p-2" data-bs-toggle="modal" data-bs-target="#Modal_1">
+            <img src="images/NFT-5.png" class="card-img-top object-fit-cover rounded-2" alt="" id="card-image">
+            <h5 class="card-title py-2 fw-bolder text-center">Солнцезащитные<br>очки</h5>
+            <div class="card-body">                
+                <div class="row p-0">
+                    <div class="col-12 col-lg-8 row">
+                        <p class="col-8 col-lg-12 m-0 font-size-12 p-0">Ставка</p>
+                        <div class="col-4 col-lg-6 d-flex flex-row align-items-center">
+                            <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
+                            <p class="m-0">1.75</p>
+                        </div>
                     </div>
+                    <button class="col-12 col-lg btn btn-dark p-0 py-2 py-lg-0 text-wrap mt-2 mt-lg-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
                 </div>
-                <button class="btn btn-dark text-nowrap p-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
-            </div>
-        </div>
-
-        <div class="bg-white p-2 rounded d-flex flex-column align-items-center width-auto" style="width: 270px;">
-            <img src="images/NFT-3.png" class="rounded object-fit-cover" alt="" width="250" height="250">
-            <div class="h5 py-3 fw-bolder">Солнцезащитные очки</div>
-            <div class="d-flex flex-row gap-5">
-                <div class="d-flex flex-column">
-                    <p class="m-0 font-size-12">Cтавка</p>
-                    <div class="d-flex flex-row align-items-center">
-                        <img src="images/mdi_ethereum.png">
-                        <p class="m-0">1.75</p>
-                    </div>
-                </div>
-                <button class="btn btn-dark text-nowrap p-0" type="submit">СДЕЛАТЬ СТАВКУ</button>
             </div>
         </div>
     </div>
     
-    <!-- Копки для скролла -->
-    <div class="d-flex justify-content-between align-items-center bg-white my-5 py-2 rounded" style="width: 150px;">
-        <button type="button" class="btn">
-            <span class="badge"><img src="images/arrow-left.svg"></span>
-        </button>
-        |
-        <button type="button" class="btn">
-            <span class="badge"><img src="images/arrow-right.svg"></span>
-        </button>
+    <!-- Модальное окно 2 -->
+    <button type="button" class="btn btn-outline-dark text-nowrap medium-font mt-5 p-3" data-bs-toggle="modal" data-bs-target="#Modal_1">
+        ПОСМОТРЕТЬ БОЛЬШЕ</button>
+
+    <div class="modal fade" id="Modal_1" tabindex="-1" aria-labelledby="Modal_1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" id="modal-width">
+        <div class="modal-content">
+        <div class="modal-body">
+            <!-- Карусель -->
+            <div id="card-carousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/carousel-1.jpg" alt="" id="modal-width-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/carousel-2.jpg" alt="" id="modal-width-img">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/carousel-3.jpg" alt="" id="modal-width-img">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#card-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#card-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        </div>
+    </div>
     </div>
 </div>
 
-<div class="d-flex justify-content-end p-0" id="bg-two-color">
+
+<div class="d-flex justify-content-end p-0" id="bg-two-color" data-bs-toggle="tooltip" data-bs-placement="top" title="Нажми сюда!">
     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Modal_window">
-        <img src="images/Group 1.png">
+        <img src="images/Group 1.png" alt="" class="modal-img">
     </button>
 </div>
 
-<!-- Modal -->
+<!-- Модальное окно 1 -->
 <div class="modal fade" id="Modal_window" tabindex="-1" aria-labelledby="Modal_window_Label" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="p-3">
-        <h2 class="modal-title fs-5" id="Modal_window_Label">Недавно просмотренные</h2>
+        <h2 class="modal-title fs-5" id="Modal_window_Label">НЕДАВНО ПРОСМОТРЕННЫЕ</h2>
         <p id="second" id="Modal_window_Label">16.10.2025</p>
-        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
       </div>
-      <div class="modal-body d-flex flex-column gap-3">
-        <img class="shadow" id="shadow_act" src="images/1.png">
-        <img class="shadow" src="images/2.png">
-        <img class="shadow" src="images/3.png">        
-        <img class="shadow" src="images/1.png">
-        <img class="shadow" src="images/2.png">
+      <div class="modal-body d-flex flex-column align-items-center gap-3">
+        <img class="rounded-3" id="shadow_act" src="images/1.png">
+        <img class="rounded-3" id="shadow_act" src="images/2.png">
+        <img class="rounded-3" id="shadow_act" src="images/3.png">        
+        <img class="rounded-3" id="shadow_act" src="images/1.png">
+        <img class="rounded-3" id="shadow_act" src="images/2.png">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-outline-dark text-nowrap medium-font з-3" data-bs-dismiss="modal">ЗАКРЫТЬ</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="p-5">
+<div class="p-md-5 p-4" id="collection">
     <h2 class="text-center py-5 medium-font">Лучшая коллекция</h2>
 
     <!-- Табы (навигационные вкладки) -->
@@ -242,7 +273,7 @@
         <button class="nav-link" id="tab-year" data-bs-toggle="tab" data-bs-target="#tabpane-year" type="button" role="tab">Год</button>
         </li>
     </ul>
-    <div class="tab-content border border-top-0 p-3 rounded-bottom" id="demoTabsContent">
+    <div class="tab-content border border-top-0 p-3 rounded-bottom overflow-x-scroll" id="demoTabsContent">
         <div class="tab-pane fade show active" id="tabpane-day" role="tabpanel">
         <!-- Сегодня -->
         <table class="table table-hover for_table">
@@ -259,18 +290,18 @@
         <tbody>            
             <tr>
             <th scope="row">
-                <img src="images/Group 2.png">
+                <img src="images/Group 2.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>4,780</p>
                 </div>
             </td>
             <td class="text-success">+27,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>7,9</p>
                 </div>
             </td>
@@ -280,18 +311,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 3.png">
+                <img src="images/Group 3.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>8,456</p>
                 </div>
             </td>
             <td class="text-success">+27,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>3,5</p>
                 </div>
             </td>
@@ -301,18 +332,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 2.png">
+                <img src="images/Group 2.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>4,780</p>
                 </div>
             </td>
             <td class="text-success">+27,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>7,9</p>
                 </div>
             </td>
@@ -322,18 +353,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 3.png">
+                <img src="images/Group 3.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>8,456</p>
                 </div>
             </td>
             <td class="text-success">+27,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>3,5</p>
                 </div>
             </td>
@@ -351,7 +382,7 @@
             <tr>
             <th scope="col" class="text-secondary">Коллекция</th>
             <th scope="col" class="text-secondary">Объем</th>
-            <th scope="col" class="text-secondary">30 дней %</th>
+            <th scope="col" class="text-secondary">30дн %</th>
             <th scope="col" class="text-secondary">Мин цена</th>
             <th scope="col" class="text-secondary">Владельцы</th>
             <th scope="col" class="text-secondary">Предметы</th>
@@ -360,18 +391,18 @@
         <tbody>            
             <tr>
             <th scope="row">
-                <img src="images/Group 2.png">
+                <img src="images/Group 2.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>14,780</p>
                 </div>
             </td>
             <td class="text-success">+13,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>7,9</p>
                 </div>
             </td>
@@ -381,18 +412,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 3.png">
+                <img src="images/Group 3.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>18,456</p>
                 </div>
             </td>
             <td class="text-success">+0,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>3,5</p>
                 </div>
             </td>
@@ -402,18 +433,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 2.png">
+                <img src="images/Group 2.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>14,780</p>
                 </div>
             </td>
             <td class="text-success">+13,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>7,9</p>
                 </div>
             </td>
@@ -423,18 +454,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 3.png">
+                <img src="images/Group 3.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>18,456</p>
                 </div>
             </td>
             <td class="text-danger">-2,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>3,5</p>
                 </div>
             </td>
@@ -461,18 +492,18 @@
         <tbody>            
             <tr>
             <th scope="row">
-                <img src="images/Group 2.png">
+                <img src="images/Group 2.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>114,780</p>
                 </div>
             </td>
             <td class="text-success">+7,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>7,9</p>
                 </div>
             </td>
@@ -482,18 +513,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 3.png">
+                <img src="images/Group 3.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>118,456</p>
                 </div>
             </td>
             <td class="text-danger">-27,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>3,5</p>
                 </div>
             </td>
@@ -503,18 +534,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 2.png">
+                <img src="images/Group 2.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>114,780</p>
                 </div>
             </td>
             <td class="text-success">+7,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>7,9</p>
                 </div>
             </td>
@@ -524,18 +555,18 @@
 
             <tr>
             <th scope="row">
-                <img src="images/Group 3.png">
+                <img src="images/Group 3.png" alt="" class="row-img">
             </th>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>118,456</p>
                 </div>
             </td>
             <td class="text-success">+0,78%</td>
             <td>
-                <div class="d-flex align-items-baseline">
-                <img src="images/mdi_ethereum.png">
+                <div class="d-flex align-items-start">
+                <img src="images/mdi_ethereum.png" alt="" class="ethereum-img">
                 <p>3,5</p>
                 </div>
             </td>
@@ -548,8 +579,8 @@
     </div>
 </div>
 
-<div class="p-5">
-    <h2 class="medium-font text-center p-5">Часто задаваемые вопросы<br><span class="text-body-tertiary">Вопросы</span></h2>
+<div class="p-md-5 p-4" id="question">
+    <h2 class="medium-font text-center py-5">Часто задаваемые вопросы</h2>
     <!-- Аккордеон -->
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item my-3 border-bottom border-2">
@@ -615,26 +646,27 @@
 </div>
 </div>
 
-<div class="p-5">
+<div class="p-md-5 p-4" id="creat-nft">
     <h2 class="medium-font text-center p-5">Создайте свой NFT</h2>
-    <div class="row">
-        <div class="col-7">
+    <form class="g-3 needs-validation" novalidate>
+        <div class="row">
+        <div class="col-lg-7 col-12">
             <div class="mb-3">
                 <label for="FormControl_Name" class="form-label for_table">Имя</label>
-                <form class="d-flex">
+                <div class="d-flex">
                     <input type="text" class="form-control" id="before" id="FormControl_Name" placeholder="Название вашего творения"  required><label for="before">&nbsp;</label>
-                </form>
+                </div>                
             </div>
 
             <div class="mb-3">
                 <label for="FormControl_Describe" class="form-label for_table">Описание</label>
-                <form class="d-flex">
+                <div class="d-flex">
                     <textarea class="form-control" id="before" id="FormControl_Describe" rows="4" placeholder="Введите ваше описание" required></textarea><label for="before">&nbsp;</label>
-                </form>
+                </div>
             </div>
 
             <div class="row mb-3">
-                <div class="col-3">
+                <div class="col col-md-3">
                     <label for="FormControl_Format" class="form-label for_table">Формат</label>
                     <select class="form-select" id="form_format" id="FormControl_Format" required>
                         <option value="1" selected>10%</option>
@@ -643,7 +675,7 @@
                     </select>    
                 </div>
 
-                <div class="col-3">
+                <div class="col col-md-3">
                     <label for="FormControl_Size" class="form-label for_table">Размер</label>
                     <input type="text" class="form-control" id="before" id="FormControl_Size" placeholder="100×100" maxlength="7" required>
                 </div>
@@ -651,9 +683,9 @@
 
             <div class="mb-3">
                 <label for="FormControl_Tag" class="form-label for_table">Теги</label>
-                <form class="d-flex">
+                <div class="d-flex">
                     <input type="text" class="form-control" id="before" id="FormControl_Tag" placeholder="#КрасивыйЗамок, #обезьяны и т.д." required><label for="before">&nbsp;</label>
-                </form>
+                </div>
             </div>
 
 
@@ -671,7 +703,7 @@
                 </div>
 
                 <div class="col mb-3">
-                    <label for="FormControl_Have" class="form-label">В наличии</label>
+                    <label for="FormControl_Have" class="form-label for_table">В наличии</label>
                     <input type="text" class="form-control" id="before" id="FormControl_Have" placeholder="001" required>
                 </div>
             </div>
@@ -686,13 +718,52 @@
                 <label class="form-check-label for_table" for="switchCheck-2">Прямая Продажа
                     <br><span id="second">Никаких ставок - только прямая продажа</span></label>
                 <input class="form-check-input" type="checkbox" id="switchCheck-2" name="Radio">
-            </div>
-
-            <button class="accordion-button collapsed for_table" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                СОЗДАТЬ
-            </button>
+            </div>                
         </div>
-        <div class="col">
+        <div class="col-lg-5 col-12 pb-5">
+            <label class="form-label for_table" for="customFile">Ваш NFT</label><br>
+            <input type="file" class="form-control-lg" id="customFile" required>
+            <div class="invalid-feedback">Загрузите файл</div>
+            <div class="valid-feedback">Файл загружен</div>
+        </div>
+        </div>
+        
+        <button class="col-lg-7 col-12 btn btn-dark text-nowrap p-3 medium-font" type="submit">СОЗДАТЬ</button>
+    </form>    
+</div>
+
+<div class="m-md-5 m-4 bg-black rounded-5">
+    <div class="row py-2 p-md-5 p-4">
+        <div class="col-12 col-md-7 py-5">
+            <h2 class="medium-font text-light">Создавайте и продавайте NFT<br><span class="for_table" id="second">Крупнейшая площадка NFT</span></h2>
+            <div class="col-xl-10 col-12 row gap-3 pt-5">
+                <button type="button" class="btn btn-light medium-font px-3 col-12 col-md-5" id="button-size" onclick="location.href='#about-more'">Узнать больше</button>
+                <button type="button" class="btn btn-outline-light medium-font px-3 col-12 col-md" id="button-size">Продать творение</button>
+            </div>
+        </div>
+        <div class="col-5 d-flex align-items-center">
+            <img src="images/light-nft.png" alt="" id="part-img">
+        </div>
+    </div>
+</div>
+
+<div class="mt-5 bg-black p-md-5 p-4">
+    <div class="row py-3">
+        <a href="#main" class="col-xl-6 col-lg-4 col-md-7 col"><div class="d-flex align-items-center gap-3">
+            <img src="images/Wave.png" alt="">
+            <h2 class="medium-font text-light">DiveSea</h2>
+        </div></a>
+        <div class="col d-flex" id="footer-flex-wrap">
+            <p class="cursor-wait"><a>Политика конфиденциальности</a></p>
+            <p class="cursor-wait"><a>Условия и положения</a></p>
+            <p class="cursor-wait"><a>О нас</a></p>
+            <p class="cursor-wait"><a>Контакт</a></p>
+        </div>
+    </div>
+    <div class="row border-top pt-5">
+        <img src="images/Lower-1.png" alt="" class="col-md-4 col object-fit-contain footer-img pb-5">
+        <div class="col"></div>
+        <a href="https://www.figma.com/design/sTzhgBUSS3ViVlW4mexxyD/сайт?node-id=0-1&p=f&t=9LlvxMjPSCICtPe3-0" class="col-xl-3 col-lg-4 col-md-5 col-12"><img src="images/Socials.png" alt="" class="object-fit-contain"></a>
     </div>
 </div>
 
