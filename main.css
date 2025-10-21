@@ -4,9 +4,17 @@ div, h1, h2, h3, h4, h5, h6, p {
   font-style: normal;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .h1-1 {
   font-size: calc(3rem + 1.5vw);
   font-weight: 700;
+}
+
+h5 {
+  font-size: 18px !important;
 }
 
 .medium-font {
@@ -20,6 +28,10 @@ div, h1, h2, h3, h4, h5, h6, p {
 .for_table {
   font-size: 20px !important;
   font-weight: 500;
+}
+
+#offcanvas-item {
+  justify-content: end;
 }
 
 #before, #form_format {
@@ -75,14 +87,264 @@ div, h1, h2, h3, h4, h5, h6, p {
   color: gray;
 }
 
+#footer-flex-wrap {
+  font-size: 14px;
+  color: gray;
+  gap: 1.5rem;
+}
+
 #bg-two-color {
   background: linear-gradient(to bottom, #e2e3e5 50%, #fff 50%);
 }
 
 #shadow_act {
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+  max-width: 40vw;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
-#shadow_act:focus {
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
-}/*# sourceMappingURL=main.css.map */
+#shadow_act:hover, #shadow_act:active {
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.3);
+}
+
+#modal-width {
+  max-width: 85vw;
+}
+
+#modal-width-img {
+  max-width: 80vw;
+}
+
+#img-size-1 {
+  width: 27vw;
+  height: 37vh;
+  border-radius: 2rem;
+}
+
+#img-size-2 {
+  width: 22vw;
+  height: 32vh;
+  bottom: 12vw;
+  border-radius: 2rem;
+}
+
+#pattern_img {
+  width: 10vw;
+}
+
+#part-img {
+  max-width: 30vw;
+}
+
+#button-size {
+  padding: 1rem 0;
+}
+
+div {
+  font-size: 18px;
+}
+
+#card-image {
+  height: 23vh;
+  width: 18vw;
+}
+
+#card-gap {
+  gap: 2rem;
+}
+
+#card-button {
+  padding: 0 1vw;
+}
+
+.btn {
+  font-size: 16px !important;
+}
+
+.modal-img {
+  max-width: 35vw;
+}
+
+.row-img {
+  max-width: 20vw;
+}
+
+#customFile {
+  border: 1px solid #fff;
+}
+
+.ethereum-img {
+  width: 1.5vw;
+}
+
+.cursor-wait {
+  cursor: wait;
+}
+
+@media screen and (max-width: 1024px) {
+  h1, .h1-1 {
+    font-size: 48px !important;
+  }
+  h2 {
+    font-size: 28px !important;
+  }
+  div {
+    font-size: 16px !important;
+  }
+  a, h5 {
+    font-size: 14px !important;
+  }
+  .for_table {
+    font-size: 16px !important;
+    font-weight: 500;
+  }
+  .form-control-lg {
+    font-size: 1rem !important;
+  }
+  #card-gap {
+    gap: 0.5rem;
+  }
+  #card-button {
+    font-size: 12px !important;
+  }
+  .btn {
+    font-size: 14px !important;
+  }
+  .row-img {
+    max-width: 15vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-item {
+    margin: 2vh 0;
+  }
+  #img-size-1 {
+    width: 30vw;
+    height: 30vh;
+  }
+  #img-size-2 {
+    width: 25vw;
+    height: 25vh;
+    bottom: 20vh;
+    right: 50%;
+  }
+  #arrow-img {
+    width: 12vw;
+  }
+  h1, .h1-1 {
+    font-size: 36px !important;
+  }
+  h2 {
+    font-size: 24px !important;
+  }
+  div {
+    font-size: 14px !important;
+  }
+  td {
+    font-size: 14px !important;
+  }
+  #card-button {
+    width: 10vw;
+    font-size: 10px !important;
+  }
+  .btn {
+    font-size: 12px !important;
+  }
+  .modal-img {
+    max-width: 45vw;
+  }
+  #part-img {
+    max-width: 45vw;
+    position: relative;
+    right: 8vw;
+  }
+  #footer-flex-wrap {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #footer-flex-wrap p {
+    padding: 0;
+    margin: 0;
+  }
+  #expand-lg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #offcanvas-item {
+    justify-content: start;
+  }
+  .ethereum-img {
+    width: 2vw;
+  }
+  #shadow_act {
+    max-width: 60vw;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  .modal-img {
+    max-width: 60vw;
+  }
+  #card-image {
+    height: 15vh;
+    width: 30vw;
+  }
+}
+@media screen and (max-width: 376px) {
+  #img-size-1 {
+    width: 60vw;
+    height: 25vh;
+    border-radius: 1rem;
+  }
+  #img-size-2 {
+    width: 50vw;
+    height: 20vh;
+    bottom: 10vh;
+    left: 25vw;
+    border-radius: 1rem;
+  }
+  #arrow-img {
+    width: 20vw;
+    position: relative;
+    left: 30vw;
+  }
+  #pattern-img {
+    width: 20vw;
+    position: relative;
+    left: 30vw;
+  }
+  .row-img {
+    max-width: 25vw;
+  }
+  h1, .h1-1 {
+    font-size: 24px !important;
+  }
+  h2 {
+    font-size: 20px !important;
+  }
+  div {
+    font-size: 12px !important;
+  }
+  h5, td, p, .btn {
+    font-size: 10px !important;
+  }
+  .ethereum-img {
+    width: 3vw;
+  }
+  .form-control, .form-control-lg {
+    font-size: 12px !important;
+  }
+  #part-img {
+    max-width: 90vw;
+    right: 11vw;
+  }
+  #card-image {
+    height: 15vh;
+    width: 30vw;
+  }
+  .modal-img {
+    max-width: 90vw;
+  }
+  #shadow_act {
+    max-width: 80vw;
+  }
+}/*# sourceMappingURL=style.css.map */
