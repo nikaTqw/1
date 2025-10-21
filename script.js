@@ -1,15 +1,21 @@
-const input = document.getElementById('FormControl_Size');
-        
-input.addEventListener('input', function(e) {
-    let value = this.value.replace(/[^0-9]/g, ''); 
+// tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-    if (value.length === 3) {
-        value += '×';
-    }
-    
-    if (value.length > 7) {
-        value = value.slice(0, 7);
-    }
-    
-    this.value = value;
-});
+// forms
+(() => {
+  'use strict'
+
+  const forms = document.querySelectorAll('.needs-validation')
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
